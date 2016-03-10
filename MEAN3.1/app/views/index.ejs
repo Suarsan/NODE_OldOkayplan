@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="/home/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/home/css/main.css">
+    <link rel="stylesheet" href="/home/menu/css/normalize.css">
+    <link rel="stylesheet" href="/home/menu/css/component.css">
+    <script type="text/javascript" src="/home/menu/js/modernizr.custom.js"></script>
+  </head>
+<body class="">
+    <div class="row">
+        <div id="fondo" class="col-xs-12">
+            <ul id="gn-menu" class="gn-menu-main">
+                <li class="gn-trigger">
+                    <a class="gn-icon gn-icon-menu">
+                        <span>Menu</span>
+                    </a>
+                    <nav class="gn-menu-wrapper">
+                        <div class="gn-scroller">
+                            <ul class="gn-menu">
+                                <li>
+                                    <a class="gn-icon gn-icon-archive">Mis eventos</a>
+                                    <!--<ul class="gn-submenu">
+                                        <li>
+                                            <a class="gn-icon gn-icon-illustrator">Creados</a>
+                                        </li>
+                                        <li>
+                                            <a class="gn-icon gn-icon-photoshop">Invitado</a>
+                                        </li>
+                                    </ul>-->
+                                </li>
+                                <li>
+                                    <a class="gn-icon gn-icon-user">Mi perfil</a>
+                                </li>
+                                <li>
+                                    <a class="gn-icon gn-icon-cog">Opciones</a>
+                                </li>
+                                <li>
+                                    <a class="gn-icon gn-icon-help">Ayuda</a>
+                                </li>
+                            </ul>
+                        </div><!-- /gn-scroller -->
+                    </nav>
+                </li>
+                <li><a href="">Bienvenido a OkayPlan</a></li>
+            </ul>
+            <!--  ANGULAR VIEWS-->
+            <section ng-view></section>
+        </div><!-- /container -->
+    </div>
+    
+    
+
+    
+	
+
+    <script type="text/javascript">
+		window.user = <%- user || 'null' %>;
+	</script>
+
+	<!-- Libraries  --><!-- ¡¡¡Cambiar por archivos minificados!!!-->
+	<script type="text/javascript" src="/lib/angular/angular.js"></script>
+	<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="/home/home.client.module.js"></script>
+	<script type="text/javascript" src="/home/controllers/home.client.controller.js"></script>
+	<script type="text/javascript" src="/home/config/home.client.routes.js"></script>
+	<script type="text/javascript" src="/users/users.client.module.js"></script>
+	<script type="text/javascript" src="/users/services/authentication.client.service.js"></script>
+	<script type="text/javascript" src="/application.js"></script>
+    <script type="text/javascript" src="/home/js/jquery/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="/home/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="home/menu/js/classie.js"></script>
+    <script type="text/javascript" src="home/menu/js/gnmenu.js"></script>
+    <script type="text/javascript">
+       new gnMenu( document.getElementById( 'gn-menu' ) );
+    </script>
+   
+    
+     
+  </body>
+</html>

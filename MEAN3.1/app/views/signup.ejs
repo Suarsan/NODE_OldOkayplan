@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title><%= title %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="home/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="home/css/main.css">
+</head>
+<body class="container-fluid">
+    <!-- BANNER SUPERIOR -->
+    <div class="row">
+      <div id="divbanner" class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6">
+        <h1 align="center">Registro</h1>
+      </div>
+    </div>
+    <!-- LOGO -->
+    <div class="row">
+      <div id="divlogo" class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6">
+        <img id="logo" src="home/img/mainlogo.png" class="img-responsive" alt="okayPlan">
+        <h1 align="center">okayPlan.com</h1>
+      </div>
+    </div>
+       <!-- INFO -->
+      <div class="row">
+        <div id="divinfo" class="col-xs-12">
+           <!-- Mostrar mensajes flash  -->
+          <% for(var i in messages) { %>
+            <div class="flash"><h5><%= messages[i] %></h5></div>
+          <% } %>
+        </div>
+      </div>
+      <!-- REGISTRO -->
+    <form action="/signup" method="post">
+    <div class="row">
+      <div id="divsignup" class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 input-group">
+        <input id="input-email" name="email" class="form-control" type="email" placeholder="Email">
+        <input id="input-user" name="username" class="form-control" type="text" placeholder="Nombre de usuario">
+        <input id="input-password" name="password" class="form-control" type="password" placeholder="Contraseña">
+        <button id="btn-entry" class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4 btn" type="submit">Crear cuenta</button>
+      </div>
+    </div>
+    </form>
+    <!--  JQUERY-->
+    <script type="text/javascript" src="home/js/jquery/jquery-1.12.0.js"></script>
+    <!--  BOOTSTRAP-->
+    <script type="text/javascript" src="home/js/bootstrap/bootstrap.min.js"></script>
+    <!-- MAQUETACION mediante JQUERY -->
+<script type="text/javascript">
+  window.addEventListener("load",function() {
+    setTimeout(function(){
+      window.scrollTo(0, 1);
+    }, 0);
+  });
+  $(document).ready(function(){
+    var alto = $(window).height();
+    var altoDocumento = $(document).height();
+    $("#divbanner").height(alto*0.1);
+    $("#divlogo").height(alto*0.35);
+    $("#divinfo").height(alto*0.15);
+    $("#divsignup").height(alto*0.30);
+    $("html,body").stop().animate({scrollTop: altoDocumento-alto});
+  });
+</script>
+
+</body>
+</html>
