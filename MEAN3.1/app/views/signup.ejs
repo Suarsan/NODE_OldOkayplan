@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="home/css/main.css">
 </head>
 <body class="container-fluid">
-    <!-- BANNER SUPERIOR -->
+  <div class="row">
+    <div id="fondologinviews" class="container-fluid">
+      <!-- BANNER SUPERIOR -->
     <div class="row">
       <div id="divbanner" class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6">
         <h1 align="center">Registro</h1>
@@ -43,6 +45,10 @@
       </div>
     </div>
     </form>
+    </div>
+  </div>
+
+    
     <!--  JQUERY-->
     <script type="text/javascript" src="home/js/jquery/jquery-1.12.0.js"></script>
     <!--  BOOTSTRAP-->
@@ -59,8 +65,8 @@
     var altoDocumento = $(document).height();
     $("#divbanner").height(alto*0.1);
     $("#divlogo").height(alto*0.35);
-    $("#divinfo").height(alto*0.15);
-    $("#divsignup").height(alto*0.30);
+    $("#divinfo").height(alto*0.20);
+    $("#divsignup").height(alto*0.35);
     $("html,body").stop().animate({scrollTop: altoDocumento-alto});
   });
 </script>
