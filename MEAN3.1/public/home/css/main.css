@@ -9,7 +9,7 @@ body{
 	margin:0;
 	display:block;
   	padding: 0;
-  	background:white;
+  	background-color: rgba(0,209,237,1.0);
   	font-size:62.5px;}
 h1{
   	color:white;
@@ -62,7 +62,7 @@ h5{
 	/*********                        **********/
 	/*******************************************/
   	#fondologinviews{
-  		background-color: #00D1ED;}
+  		}
   	#maincontainer{
   		padding-top:60px;}
   	#okayPlan{
@@ -73,7 +73,7 @@ h5{
     	margin-bottom:15px;
     	max-height:250px;}
     #fondo{
-    	background-color: #00A4BA;
+    	background-color: rgba(0,164,186,1.0);
     	height:100%;}
     #input-email{
     	margin-bottom:2px;
@@ -95,9 +95,9 @@ h5{
     	border:solid 2px white;
     	color:white;}
     .btn-new{
-    	background-color:#ffff6b;
+    	background-color:rgba(255,255,107,1.0);
     	border-radius: 0!important;
-    	border:solid 1px #ffff6b;
+    	border:solid 1px rgba(255,255,107,1.0);
     	color:gray;}
     .input-new{
     	border-radius: 0!important;
